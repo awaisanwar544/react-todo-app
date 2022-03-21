@@ -1,8 +1,13 @@
 import React from "react";
 
-const TodoItem = ({id, todo}) => {
+const TodoItem = ({todo, handleChangeProps, deleteTodoProps}) => {
   return (
-    <li>{todo.title}</li>
+    <li>
+      <input type="checkbox"
+      checked={todo.completed}
+      onChange={() => handleChangeProps(todo.id)}
+      /> <button onClick={() => deleteTodoProps(todo.id)}>Delete</button> {todo.title}
+    </li>
   )
 }
 
