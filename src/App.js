@@ -1,11 +1,11 @@
 import './App.css';
+import Header from './components/Header';
 import TodoContainer from './components/TodoContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <Header />
       <main className="main">
         <TodoContainer />
       </main>
